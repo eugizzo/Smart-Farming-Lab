@@ -4,6 +4,14 @@
 # 🌾 Smart Farming Lab Survey
 Welcome to the Smart Farming Lab Survey – a collaborative research initiative aimed at cataloging and analyzing computer vision datasets in the domain of precision agriculture and smart farming.
 
+* Smart Farming Lab is a collaborative research initiative focused on collecting, curating, and evaluating computer vision datasets used in precision agriculture and smart farming applications.
+
+* A comprehensive catalog of agricultural vision datasets designed to support precision agriculture and smart farming.
+Focus on plant species, plant parts, annotation types, and modalities
+
+* Tasks include classification, segmentation, and detection
+
+
 ## 📘 Overview
 The Smart Farming Lab compiles and evaluates a wide range of vision datasets used in modern agricultural AI systems. These datasets enable various tasks including plant disease detection, weed classification, crop phenotyping, and more.
 
@@ -67,6 +75,24 @@ Growth Trends: Historical dataset availability over time
 
 Most Studied Crops: Overview of frequently represented plants
 
+## Load and Clean the Dataset
+
+```python
+import pandas as pd
+
+# Load the local TSV dataset
+file_path = "/content/drive/MyDrive/smartfarminglab/dataset_table.tsv"
+df = pd.read_csv(file_path, sep='\t')
+
+# Drop unneeded fields
+df = df.drop(columns=['Paper-URL', 'Dataset-URL'], errors='ignore')
+
+# Show the first few rows
+df.head()
+```
+<img width="1828" height="573" alt="image" src="https://github.com/user-attachments/assets/61df516b-8da0-4a84-9357-440c5d5dca76" />
+
+
 ## 🖼️ Dashboard (Coming Soon)
 A preview of an interactive visualization dashboard is in progress to allow deeper dataset exploration and filtering by task, plant, year, and more.
 ```python
@@ -106,7 +132,17 @@ plt.show()
 <img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/73526f09-d8ff-44ca-b8c2-4acc8b90e48e" />
 
 📁 Files
-Smart_Farming_Lab_Survey.pdf – Full report of the dataset survey (see /docs folder or attached here)
 
-🙏 Acknowledgements
-Special thanks to the research contributors, dataset authors, and open-source community enabling precision agriculture innovation.
+### dataset link
+
+https://drive.google.com/file/d/1c1f8bFDtf4rsl3b3QkrodEqQgTcm_Yeu/view?usp=sharing
+
+### Power BI link
+
+https://drive.google.com/file/d/1kuWWI1VK-3hhLGoPlVLyogcfq8sElNK1/view?usp=sharing
+
+### Power points link
+
+https://www.canva.com/design/DAGvFlVmDZ0/Jp9VBYl9Bstuc5jCSLU-mA/edit?utm_content=DAGvFlVmDZ0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+

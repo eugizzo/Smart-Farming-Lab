@@ -93,7 +93,7 @@ df.head()
 <img width="1828" height="573" alt="image" src="https://github.com/user-attachments/assets/61df516b-8da0-4a84-9357-440c5d5dca76" />
 
 
-## 🖼️ Dashboard (Coming Soon)
+## 🖼️ Dashboard
 A preview of an interactive visualization dashboard is in progress to allow deeper dataset exploration and filtering by task, plant, year, and more.
 ```python
 import plotly.express as px

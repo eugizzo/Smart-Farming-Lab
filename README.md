@@ -76,6 +76,35 @@ fig = px.sunburst(df, path=['task', 'plant_english', 'plant_part'], values='anno
                   title="🌐 Dataset Coverage by Task, Plant, and Part")
 fig.show()
 ```
+<img width="1119" height="700" alt="Screenshot (304)" src="https://github.com/user-attachments/assets/166f6789-406b-45a8-8e42-81f3c5c987ca" />
+
+### Dataset Growth Over Time
+```python
+plt.figure(figsize=(10, 5))
+yearly = df['year'].value_counts().sort_index()
+sns.lineplot(x=yearly.index, y=yearly.values, marker='o', linewidth=2, color='green')
+plt.title('🗓️ Number of Datasets Published Over Time')
+plt.xlabel('Year')
+plt.ylabel('Dataset Count')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+```
+<img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/906730e5-2eb0-4a46-9ba5-ce328f97f8eb" />
+
+
+### Most Common Plant Parts
+```python
+plt.figure(figsize=(10, 5))
+sns.countplot(data=df, y='plant_part', order=df['plant_part'].value_counts().index, palette='coolwarm')
+plt.title('🌱 Most Commonly Annotated Plant Parts')
+plt.xlabel('Count')
+plt.ylabel('Plant Part')
+plt.tight_layout()
+plt.show()
+```
+<img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/73526f09-d8ff-44ca-b8c2-4acc8b90e48e" />
+
 📁 Files
 Smart_Farming_Lab_Survey.pdf – Full report of the dataset survey (see /docs folder or attached here)
 
